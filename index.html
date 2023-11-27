@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Meteorological Data</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>My Meteorological Data</h1>
+    <div class="container">
+        <label for="city">Choose a city in Vietnam:</label>
+        <select id="city">
+            <option value="hanoi">Ha Noi</option>
+            <option value="hochiminh">Ho Chi Minh City</option>
+            <option value="haiphong">Hai Phong</option>
+            <option value="danang">Da Nang</option>
+            <option value="cantho">Can Tho</option>
+            <!-- Thêm các thành phố khác tại Việt Nam nếu cần -->
+        </select>
+        <button onclick="showWeather()">Check the weather in your area</button>
+        <div class="data" id="weatherData">
+            <h2>Weather Information</h2>
+            <p><strong>Temperature:</strong> <span id="temperature"></span></p>
+            <p><strong>Humidity:</strong> <span id="humidity"></span></p>
+            <p><strong>Wind:</strong> <span id="wind"></span></p>
+        </div>
+    </div>
+
+    <script>
+        function showWeather() {
+            var city = document.getElementById("city").value;
+
+            // Simulate fetching weather data (replace with actual API call)
+            var temperatureData = "25°C";
+            var humidityData = "60%";
+            var windData = "10 km/h";
+
+            // Display weather data
+            document.getElementById("temperature").textContent = temperatureData;
+            document.getElementById("humidity").textContent = humidityData;
+            document.getElementById("wind").textContent = windData;
+
+            // Show the weather data container
+            document.getElementById("weatherData").style.display = "block";
+        }
+    </script>
+</body>
+</html>
